@@ -92,7 +92,6 @@
     color: #fff; 
     text-decoration: none; 
     border-radius: 5px; 
-    margin-buttom:0px;
   }
   .ad { 
     background: #f0f0f0; 
@@ -105,7 +104,7 @@
     background: #f8f8f8;
     text-align: center;
     padding: 10px 0;
-    margin-top: 0px;
+    margin-top: 200px;
     border-top: 1px solid #ddd;
   }
   footer p {
@@ -240,7 +239,7 @@
       line-height: 1.4;
     }
   }
-  /* إخفاء الهيدر والفوتر والإعلانات والبوب اب عند الطباعة */
+  /* إعدادات الطباعة */
   @media print {
     header {
       display: none;
@@ -256,17 +255,37 @@
     }
     body {
       margin: 0;
+      font-size: 12pt; /* حجم خط مناسب للطباعة */
+      line-height: 1.5;
     }
     .container {
-      padding: 0;
+      padding: 10mm; /* هوامش مناسبة للطباعة */
       max-width: 100%;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 16pt; /* حجم العنوان أكبر قليلاً */
+    }
+    p {
+      font-size: 24pt; /* حجم النص مناسب */
+      margin: 10px 0;
+      word-wrap:break-word;
+      line-height:2.5;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .btn {
+      display: none; /* إخفاء أزرار التحميل أو التسوق */
     }
     .print-title {
       display: block;
       text-align: center;
-      margin-top: 20px;
-      font-size: 28px; /* حجم خط أكبر */
+      margin-top: 20mm; /* مسافة من المقالة */
+      font-size: 14pt; /* حجم خط أكبر للعنوان في الـ PDF */
       font-weight: bold;
+      page-break-before: avoid; /* تجنب قطع الصفحة قبل العنوان */
     }
     .print-title a {
       color: #ff4081;
@@ -274,6 +293,10 @@
     }
     .print-title a:hover {
       text-decoration: underline;
+    }
+    @page {
+      size: A4;
+      margin: 10mm; /* هوامش الصفحة */
     }
   }
 </style>
@@ -324,10 +347,6 @@
   <p>نص إضافي لإكمال طول المقال ولتوضيح توزيع المحتوى على الصفحة بشكل متناسق، بحيث يظهر المحتوى بشكل جيد على جميع الأجهزة.</p>
   <p>نص إضافي لإكمال طول المقال ولتوضيح توزيع المحتوى على الصفحة بشكل متناسق، بحيث يظهر المحتوى بشكل جيد على جميع الأجهزة.</p>
   <a href="#" class="btn">تحميل</a>
-  <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-  <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-  <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-  <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
   <!-- عنوان الـ PDF -->
   <div class="print-title">
     <a href="https://www.example.com" target="_blank">زوروا موقعنا: www.example.com</a>
@@ -383,14 +402,6 @@
       <script async="async" data-cfasync="false" src="//pl24617574.profitableratecpm.com/04d204e8bcb443afba2286a2fc8cc3d1/invoke.js"></script>
       <div id="container-04d204e8bcb443afba2286a2fc8cc3d1"></div>
       <a href="#" class="btn">زر البوب اب</a>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
-      <p>هذه فقرة داخل البوب اب، يمكن وضع أي محتوى هنا.</p>
     </div>
   </div>
 </div>

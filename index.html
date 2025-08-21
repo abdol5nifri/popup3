@@ -24,7 +24,7 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0px 0px rgba(0,0,0,0.0);
-    position: sticky;
+    /*position: sticky;*/
     top: 0;
     z-index: 100;
   }
@@ -64,6 +64,38 @@
   .social-links li a#printBtn:hover {
     color: #e91e63;
   }
+  
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed; /* لاصق بحال البوب اب */
+    top: 50%; /* من أعلى الصفحة */
+    right: 10px; /* على اليمين */
+    width: 80px; /* عرض الشريط الجانبي */
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 101; /* فوق الهيدر، تحت البوب اب */
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sidebar ul li a {
+    color: #ff4081;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .sidebar ul li a:hover {
+    color: #e91e63;
+  }
+  
+  
   .container { 
     max-width: 800px; 
     margin: auto; 
@@ -104,7 +136,7 @@
     background: #f8f8f8;
     text-align: center;
     padding: 10px 0;
-    margin-top: 200px;
+    margin-top: 0px;
     border-top: 1px solid #ddd;
   }
   footer p {
@@ -216,6 +248,18 @@
     .social-links li a#printBtn {
       font-size: 24px; /* نفس حجم الأيقونات على الهواتف */
     }
+    
+    
+    .sidebar {
+      width: 60px; /* تصغير عرض الشريط الجانبي */
+      top: 50%; /* لاصق من أعلى الصفحة */
+      right: 0px; /* على اليمين */
+    }
+    .sidebar ul li a {
+      font-size: 18px; /* تصغير الأيقونات فالشريط */
+    }
+    
+    
     .popup {
       max-height: 70vh;
       margin-top: 15vh;
@@ -298,6 +342,14 @@
       size: A4;
       margin: 10mm; /* هوامش الصفحة */
     }
+    
+    
+    .article-printer-btn{
+        
+        display: none;
+    }
+     .sidebar{
+      display: none; /* إخفاء أزرار التحميل أو التسوق */
   }
 </style>
 </head>
@@ -316,10 +368,29 @@
   </ul>
 </header>
 
+<!-- Sidebar -->
+<div class="sidebar">
+  <ul>
+    <!-- <li><a href="https://facebook.com" target="_blank" title="فيسبوك">&#x1F4F1;</a></li>
+    <li><a href="https://twitter.com" target="_blank" title="تويتر">&#x1F426;</a></li>
+    <li><a href="https://instagram.com" target="_blank" title="إنستغرام">&#x1F4F7;</a></li> -->
+    
+     <!-- <li><a href="#" title="إعلان">📢</a></li> -->
+     <li><a href="#"id="printBtnb" title="طباعة">&#x1F5A8;</a></li>
+     
+   
+  </ul>
+</div>
+
 <div class="container">
   <h1>عنوان المقال</h1>
   <img src="https://i.postimg.cc/7hmmBvsy/4873159.jpg" alt="صورة المقال">
   <p>هذا هو نص المقال التجريبي الذي يحتوي على حوالي 100 كلمة. يمكن استبدال هذا النص بالمحتوى الحقيقي للمقال. الهدف هنا هو توفير تصميم عصري ومتجاوب مع مكان للإعلانات وسط المقالة.</p>
+  
+   <!-- زر الطابعة الجديد تحت الفقرة الأولى -->
+  <span class="article-printer-btn" id="articlePrinterBtn" title="طباعة">🖨️</span>
+  
+  
   <p>هذا هو نص المقال التجريبي الذي يحتوي على حوالي 100 كلمة. يمكن استبدال هذا النص بالمحتوى الحقيقي للمقال. الهدف هنا هو توفير تصميم عصري ومتجاوب مع مكان للإعلانات وسط المقالة.</p>
   <p>هذا هو نص المقال التجريبي الذي يحتوي على حوالي 100 كلمة. يمكن استبدال هذا النص بالمحتوى الحقيقي للمقال. الهدف هنا هو توفير تصميم عصري ومتجاوب مع مكان للإعلانات وسط المقالة.</p>
   
@@ -335,6 +406,7 @@
   <p>نص إضافي لإكمال طول المقال ولتوضيح توزيع المحتوى على الصفحة بشكل متناسق، بحيث يظهر المحتوى بشكل جيد على جميع الأجهزة.</p>
   <p>نص إضافي لإكمال طول المقال ولتوضيح توزيع المحتوى على الصفحة بشكل متناسق، بحيث يظهر المحتوى بشكل جيد على جميع الأجهزة.</p>
   <p>نص إضافي لإكمال طول المقال ولتوضيح توزيع المحتوى على الصفحة بشكل متناسق، بحيث يظهر المحتوى بشكل جيد على جميع الأجهزة.</p>
+ 
   <p>نص إضافي لإكمال طول المقال ولتوضيح توزيع المحتوى على الصفحة بشكل متناسق، بحيث يظهر المحتوى بشكل جيد على جميع الأجهزة.</p>
   <div class="ad">
     <img src="https://i.postimg.cc/VsWYyCRN/accurate-marketing-strategy-content-creation-distribution-target-audience-identification-brand-promo.jpg" alt="صورة إعلان تجريبي">
@@ -414,6 +486,9 @@
 <script>
   const popupOverlay = document.getElementById('popupOverlay');
   const closePopup = document.getElementById('closePopup');
+  const sidebarPrinterBtn = document.getElementById('printBtnb');
+  const articlePrinterBtn = document.getElementById('articlePrinterBtn');
+  
 
   let popupShown = false;
 
@@ -445,6 +520,21 @@
   document.getElementById('printBtn').addEventListener('click', () => {
     window.print();
   });
+  
+   // ربط زر الطابعة فالشريط الجانبي مع نافذة الطباعة
+  printBtnb.addEventListener('click', () => {
+    console.log('Sidebar printer button clicked'); // اختبار
+    window.print();
+  });
+  
+  
+  // ربط زر الطابعة فالمقالة مع نافذة الطباعة
+  articlePrinterBtn.addEventListener('click', () => {
+    console.log('Article printer button clicked'); // اختبار
+    window.print();
+  });
+  
+  
 </script>
 
 </body>
